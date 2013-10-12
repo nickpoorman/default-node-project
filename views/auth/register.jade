@@ -1,0 +1,11 @@
+extends ../layout
+include ../mixins/form-helpers-v3
+
+block content
+  .container.bump
+    .col-md-4
+      form(action="/signup", method="post", role="form")
+        mixin fieldAndLabel({name: 'email', label: 'Email', placeholder: 'Enter email'})
+        mixin fieldAndLabel({type: 'password', name: 'password', label: 'Password'})
+        mixin fieldAndLabel({name: 'username', label: 'Username', placeholder: 'Enter username'})
+        button(type="submit", class="btn btn-default") Sign Up!
